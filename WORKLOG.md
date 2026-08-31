@@ -59,7 +59,7 @@ sessions and between people. Newest session at the top. Append, never rewrite.
 |---|---|
 | Site type | B2B/B2G credibility "proof" site, multi-page, not a one-pager |
 | Design | Direction **B** (Industrial Editorial) with dark telemetry sections and the logo's blue→green gradient as the temperature colour language |
-| Stack | **Next.js 15 + TypeScript + Tailwind + Motion**, SSG on Vercel |
+| Stack | **Next.js 15 + TypeScript + Tailwind + Motion** — hosting later changed to own server + Docker (see below) |
 | Content | All figures in one `content/metrics.ts`, mirroring doc 04 |
 | i18n | Build multilingual structure from day one even if only EN ships first |
 
