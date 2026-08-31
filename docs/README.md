@@ -12,6 +12,7 @@ that owns the topic. Each fact has exactly one home — cross-link, don't copy.
 | 05 | [05-team-and-partners.md](05-team-and-partners.md) | Team roster, supporting institutions |
 | 06 | [06-brand-and-design.md](06-brand-and-design.md) | Colors, typography, logo, tone, motion |
 | 07 | [07-website-spec.md](07-website-spec.md) | Site structure, stack, section-by-section build spec |
+| 08 | [08-assets-inventory.md](08-assets-inventory.md) | Asset health, corrupted files, what is still missing |
 
 ## Rules
 
