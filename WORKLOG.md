@@ -63,11 +63,27 @@ sessions and between people. Newest session at the top. Append, never rewrite.
 | Content | All figures in one `content/metrics.ts`, mirroring doc 04 |
 | i18n | Build multilingual structure from day one even if only EN ships first |
 
+### Technical decisions settled with Fuad (end of session)
+
+- **Do not start building** until Isa answers — explicit instruction
+- Site code will live in `web/` inside this repo
+- Hosting: **own server** (not Vercel/Cloudflare)
+- Domain: a subdomain of `inmytime.me` for now, e.g. `astem.inmytime.me`
+- **Docker is mandatory** — local dev and deploy both containerized, with a
+  deploy workflow written
+- Claude writes, Fuad reviews
+
+Recorded in [collab/DECISIONS.md](collab/DECISIONS.md) as decisions 003–008.
+
 ### Open at end of session
 
 - 🔴 Isa: Q1 brand name, Q2 SOCAR confidentiality, Q3 design direction,
   Q8 corrupted metro PDF — these four block progress
-- Fuad: framework, repo layout, hosting, form backend, analytics, work split
+- Framework choice (Next.js vs Astro) deliberately deferred until Isa answers;
+  note that the Docker + own-server + working-contact-form requirements now lean
+  toward Next.js (a Node container) over a static Astro export behind nginx
+- Server details still unknown: OS, existing reverse proxy, registry, CI trigger,
+  DNS control — listed as S1–S6 in `collab/DECISIONS.md`
 - **No implementation started.** No `package.json`, no app code yet.
 
 ### Conflicts found and left unresolved
