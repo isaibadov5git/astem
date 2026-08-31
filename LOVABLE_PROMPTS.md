@@ -125,3 +125,6 @@ Technical Requirements
 * Stack: Next.js / React, Tailwind CSS, Framer Motion for scroll animations, Lucide React icons.
 
 * Responsiveness: Fully mobile-optimized, fast page load (<1.5s), accessible color contrast ratios.
+
+Could you add also supporters section including their logo: Supporters: UFAZ, IDDA, ASOIU, Enterprise Azerbaijan
+
