@@ -35,11 +35,11 @@ email imzası, hamısı buna bağlıdır. Sonradan dəyişmək bahadır.
 - [ ] **AstemLab** — "lab" tədqiqat/mühəndislik çalarını gücləndirir
 - [ ] Hüquqi ad ayrıdır (MMC adı) — aşağıda yaz
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(AstemLab)_
 
 Hüquqi tam ad (müqavilə/footer üçün, məs. "Astem MMC"):
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(Astem company)_
 
 ---
 
@@ -58,12 +58,12 @@ sənaye obyekti") formada yenidən yazılmalıdır — bu isə etibarı ciddi az
 - [ ] **Heç bir müştəri adı yoxdur** — hər şey anonim ("Cənubi Qafqazda iri NEZ")
 - [ ] Bilmirəm — hüquqi/SOCAR tərəfdən soruşmaq lazımdır
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(Hamısını açıq yaza bilərik — SOCAR, obyekt adları, rəqəmlər)_
 
 Deckdəki rəqəmlər (500,000 kW, 400,000 ton CO₂, 476,000 AZN, 541,908 kW)
 ictimaiyyətə açıq ola bilər?
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(Bəli)_
 
 ---
 
@@ -80,7 +80,7 @@ bölmə 4-dədir. Qısaca:
 
 Referans olaraq bəyəndiyin saytlar varsa link at (istənilən sahədən olar):
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(B variantı)_
 
 ---
 
@@ -92,12 +92,12 @@ Referans olaraq bəyəndiyin saytlar varsa link at (istənilən sahədən olar):
 
 Hansı dil default olsun (saytа ilk girəndə görünən)?
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(Hər 3 dil olsun. Default olaraq EN olsun.)_
 
 Tərcüməni kim edəcək — sən, komanda, yoxsa Claude ilkin variantı yazsın və siz
 yoxlayasınız?
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(Claude yazsın mən yoxlayım)_
 
 ---
 
@@ -106,11 +106,11 @@ yoxlayasınız?
 Domen alınıb? Yoxsa hansı adı istəyirsən? (`astem.az`, `astemlab.com`,
 `astem.energy`, `astemlab.az` ...)
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(Domen var. 'inmytime')_
 
 Domen və hosting hesabları kimin adına olacaq — şirkət, yoxsa şəxsi?
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(şəxsi)_
 
 ---
 
@@ -122,7 +122,7 @@ Domen və hosting hesabları kimin adına olacaq — şirkət, yoxsa şəxsi?
 - [ ] **Deck saytda yoxdur** — yalnız əlaqə formu ilə tələb olunur
 - [ ] Saytda deck-in özü **interaktiv səhifə** kimi olsun (PDF yox)
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(Saytda deck-in özü **interaktiv səhifə** kimi olsun (PDF yox))_
 
 ---
 
@@ -132,15 +132,15 @@ Saytda **ictimai** olaraq nə yazılsın?
 
 | Sahə | Cavab |
 |---|---|
-| Email | _(doldur)_ |
-| Telefon | _(doldur, istəmirsənsə "yox" yaz)_ |
-| Ünvan | _(doldur — ofis varmı, yoxsa sadəcə "Bakı, Azərbaycan")_ |
-| LinkedIn | _(şirkət səhifəsi varsa link)_ |
-| Digər sosial şəbəkə | _(doldur)_ |
+| Email | _(astemlab.info@gmail.com)_ |
+| Telefon | _(yox)_ |
+| Ünvan | _(sadəcə "Bakı, Azərbaycan")_ |
+| LinkedIn | _(https://www.linkedin.com/company/astem-lab/home/?viewAsMember=true)_ |
+| Digər sosial şəbəkə | _(yoxdur)_ |
 
 Formadan gələn müraciətlər hansı email-ə düşsün?
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(isaibadov5@gmail.com)_
 
 ---
 
@@ -158,7 +158,7 @@ Canva-dan yenidən export edib göndər (sənəd id-si PDF-in içindədir:
 - [ ] Orijinal məndə yoxdur
 - [ ] Bu sənəd ümumiyyətlə lazım deyil, sayta girməyəcək
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(Yenidən export etdim, göndərdim)_
 
 ---
 
@@ -174,7 +174,7 @@ stansiya adı · ölçülmüş temperatur · sərnişin sayı · bərpa oluna bi
 - [ ] Yalnız ümumi rəqəm var (541,908 kW), detal yoxdur
 - [ ] Var, amma məxfidir — xəritədə göstərmək olmaz
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(https://astem.vercel.app/metro-map Bu linkedin melumatlar tapa bilərsən. Olan data ancaq bu saytdadır, başqa heç nə yoxdur.)_
 
 ---
 
@@ -190,7 +190,7 @@ Varmı:
 - [ ] Qaranlıq fon üçün variant (ağ/açıq rəngli loqo)
 - [ ] Loqonu kim çəkib — mənbə fayl kimdədir?
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(Loqonu internetdən götürmüşəm)_
 
 Yoxdursa: loqonu vektora çevirmək lazımdır. Bunu edə bilərik, amma orijinal
 dizaynerdən almaq daha yaxşıdır.
@@ -208,7 +208,7 @@ dizaynerdən almaq daha yaxşıdır.
 
 Saytda hansı yazılsın?
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(İNFORMATION.md - de olan yazılsın)_
 
 Hər kəs üçün lazımdır:
 
@@ -217,7 +217,7 @@ Hər kəs üçün lazımdır:
 - [ ] LinkedIn profilləri (istəyənlərin)
 - [ ] Hər kəs adının və şəklinin saytda olmasına razıdır?
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(Shukur Shukurov yazılsın. Qalanları necə qeyd olunub elə yaz. Təkcə adların yazılması kifayətdir.)_
 
 ---
 
@@ -233,12 +233,12 @@ Dövlət qurumunun (IDDA) markasını icazəsiz göstərmək real problemdir.
 - [ ] İcazə yoxdur, alacağıq
 - [ ] Bilmirəm
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(heç birindən icazə yoxdur)_
 
 Bu qurumlarla münasibətin dəqiq statusu nədir — "dəstəkçi", "partnyor",
 "akselerator", "təhsil müəssisəsi"? Saytda düzgün söz işlətməliyik.
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(Ufaz-təhsil müəssisəsi Adnsu İDDA Enterprise Azerbaijan-akselerator  
 
 ---
 
@@ -247,7 +247,7 @@ Bu qurumlarla münasibətin dəqiq statusu nədir — "dəstəkçi", "partnyor",
 Saytın hazır olmasına bağlı konkret tarix varmı? (SOCAR WIN təqdimatı, investor
 görüşü, konfrans, qrant müraciəti...)
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(10 sentyabr deadlinedir)_
 
 ---
 
@@ -261,8 +261,8 @@ Sənin əlində olub bizim bilmədiyimiz material varmı? Məsələn:
 - Maliyyə modeli (Excel)
 - Video
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(heleki yoxdur)_
 
 Sayt haqqında planda olmayan hansısa arzun var?
 
-> **CAVAB:** _(buranı doldur)_
+> **CAVAB:** _(heleki yox)_
