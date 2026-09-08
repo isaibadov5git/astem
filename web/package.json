@@ -6,11 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "sync-data": "node scripts/sync-data.mjs",
     "predev": "node scripts/sync-data.mjs",
-    "prebuild": "node scripts/sync-data.mjs"
+    "prebuild": "node scripts/sync-data.mjs",
+    "pretypecheck": "node scripts/sync-data.mjs"
   },
   "dependencies": {
     "lucide-react": "0.454.0",

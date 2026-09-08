@@ -45,8 +45,9 @@ Useful scripts, all run from `web/`:
 
 `data/metro/*.json` in the repository root is canonical. `npm run sync-data`
 copies it to `web/src/data/` (git-ignored) so the build is self-contained. It
-runs automatically before `dev` and `build`. **Edit the files in `data/`, never
-the copy.**
+runs automatically before `dev`, `build` and `typecheck` — all three need the
+copy to exist, which is why each has a `pre` hook. **Edit the files in `data/`,
+never the copy.**
 
 ## First-time server setup
 
