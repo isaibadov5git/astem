@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "passengers": {
+    "total_stations": 27,
+    "total_passengers": 2153000,
+    "avg_passengers": 79741,
+    "max_passengers": 180000
+  },
+  "heat": {
+    "total_heat_kw": 722544,
+    "total_recoverable_heat_kw": 541908,
+    "avg_recoverable_heat_kw": 20071
+  },
+  "emissions": {
+    "total_co2_saved_tons": 474711.4,
+    "total_energy_saved_mwh": 2373557,
+    "total_houses_heated": 237356
+  }
+}

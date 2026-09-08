@@ -15,27 +15,40 @@ Format: `YYYY-MM-DD · qərar · kim verdi · niyə`
 | 006 | 2026-08-31 | Domen: **`inmytime.me` altında subdomen** (məs. `astem.inmytime.me`) | Fuad | Mövcud domen istifadə olunur; Isa şirkət domeni alarsa sonra köçürülür (Q5) |
 | 007 | 2026-08-31 | **Docker məcburidir** — lokal development və deploy Docker üzərindən; deploy workflow yazılmalıdır | Fuad | Öz serverində işləyəcək, təkrarlana bilən mühit lazımdır |
 | 008 | 2026-08-31 | İş bölgüsü: Claude yazır, Fuad review edir | Fuad | — |
+| 009 | 2026-09-08 | Brend adı **AstemLab**; hüquqi/footer adı "Astem company" | Isa | Q1 |
+| 010 | 2026-09-08 | **SOCAR, obyekt adları və bütün rəqəmlər saytda açıq yazıla bilər** | Isa | Q2 — məxfilik məhdudiyyəti yoxdur |
+| 011 | 2026-09-08 | Dizayn istiqaməti: **B — Industrial Editorial** | Isa | Q3 |
+| 012 | 2026-09-08 | Dillər: **EN (default) + AZ + RU**, hər üçü launch-da. Tərcüməni Claude yazır, Isa yoxlayır | Isa | Q4 |
+| 013 | 2026-09-08 | Komanda rolları `INFORMATION.md` variantı ilə; yazılış **Shukur Shukurov**; yalnız ad + rol, şəkil/bio yoxdur | Isa | Q11 |
+| 014 | 2026-09-08 | 🔴 **Dəstəkçi loqoları saytda GÖSTƏRİLMİR** — heç birindən icazə yoxdur | Isa | Q12 — hüquqi risk |
+| 015 | 2026-09-08 | Loqo internetdən götürülüb — lisenziyasız, placeholder sayılır | Isa | Q10 — dəyişdirilməlidir |
+| 016 | 2026-09-08 | Deck saytda **interaktiv səhifə** kimi olacaq, PDF yükləməsi yox | Isa | Q6 |
+| 017 | 2026-09-08 | Əlaqə: public `astemlab.info@gmail.com`, forma → `isaibadov5@gmail.com`, LinkedIn var, telefon yox, ünvan "Bakı, Azərbaycan" | Isa | Q7 |
+| 018 | 2026-09-08 | 🔴 **Deadline: 10 sentyabr 2026** | Isa | Q13 |
+| 019 | 2026-09-08 | Metro datası `astem.vercel.app` API-dan çıxarılıb `data/metro/`-ya snapshot edildi (27 stansiya, 98 çıxış) | Claude | Q9 — data yalnız orada var idi, prototipdən asılılıq aradan qaldırıldı |
 
 <!-- Yeni qərarlar bura əlavə olunur. Nömrələri artırmağı unutma. -->
 
 ## Gözləyən qərarlar
 
-### Isa cavablandırır — [`002-questions-for-isa.md`](002-questions-for-isa.md)
+### ✅ Q1–Q14 cavablandı — [`002-questions-for-isa.md`](002-questions-for-isa.md)
 
-- [ ] 🔴 Q1 — Brend adı: ASTEM yoxsa AstemLab
-- [ ] 🔴 Q2 — SOCAR adını saytda açıq çəkə bilərikmi
-- [ ] 🔴 Q3 — Dizayn istiqaməti (A / B / C)
-- [ ] Q4 — Dillər (EN / AZ / RU)
-- [ ] Q5 — Domen
-- [ ] Q6 — Deck açıq yoxsa email-gated
-- [ ] Q7 — Əlaqə məlumatları və form hara gəlsin
-- [ ] 🔴 Q8 — Metro PDF-in zədəsiz nüsxəsi
-- [ ] Q9 — 27 stansiyanın kW cədvəli
-- [ ] Q10 — Logo SVG + qaranlıq variant
-- [ ] Q11 — Komanda rolları, adların yazılışı, şəkillər
-- [ ] Q12 — Dəstəkçi loqoları üçün icazə
-- [ ] Q13 — Deadline
-- [ ] Q14 — Əlavə material
+Hamısı yuxarıdakı 009–019 qərarlarına köçürüldü.
+
+### 🔴 Yeni suallar — [`003-questions-for-isa.md`](003-questions-for-isa.md)
+
+Isa-nın cavabları yeni suallar yaratdı:
+
+- [ ] Q15 — Sənaye üzrə real bərpa oluna bilən kW (500,000 vs metro-nun 541,908-i)
+- [ ] Q16 — Payback hansıdır: 4.9–7 il, 7–10 il, yoxsa "< 5 il"?
+- [ ] Q17 — Isa saytda "Team Leader" kimi göstərilsin?
+- [ ] Q18 — Qurumların adı mətndə çəkilə bilər (loqosuz)?
+- [ ] Q19 — Hüquqi tam ad (MMC?) — footer üçün
+- [ ] Q20 — 🔴 Loqo lisenziyası — orijinal loqo çəkilməlidir
+- [ ] Q21 — `astem.vercel.app` kimindir, saxlanılırmı?
+- [ ] Q22 — `heat_kw` necə ölçülüb — metodologiya
+- [ ] Q23 — Qaz qiyməti / qazan f.i.ə. — AZN hesablaması üçün
+- [ ] Q24 — 10 sentyabr deadline-ı nədir və nə qədər real-dır?
 
 ### Fuad ilə birbaşa həll olunur (texniki)
 

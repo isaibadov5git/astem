@@ -3,33 +3,77 @@
 **Single source for every number quoted publicly.** If a figure appears on the
 site, in a deck, or in the calculator, it must match this file.
 
-Primary source: [`assets/decks/astemlab-pitch-deck.pdf`](../assets/decks/astemlab-pitch-deck.pdf)
-(SOCAR WIN Open Innovation Program — Investor Pitch).
+There are **two distinct business cases** with different physics and different
+economics. Mixing their numbers is the easiest way to lose a technical reader.
 
-## Portfolio-level metrics
-
-| Metric | Value | Scope |
+| | Industrial track | Urban / metro track |
 |---|---|---|
-| Recoverable thermal potential | 500,000+ kW | Combined industrial + urban assets |
-| Annual clean energy recycled | 2,000,000+ MWh | Portfolio-wide |
-| Scope 1 CO₂ emission reduction | 400,000+ tons / year | Portfolio-wide |
-| Natural gas offset | Millions of m³ / year | Portfolio-wide |
-| Multiplier efficiency | COP 3.8+ | System-level |
-| Average project payback | < 5 years | See pilot range below |
+| Source | Refinery effluent, cooling loops, 18–40 °C+ | Metro tunnel air, 5–30 °C (stable 18–30 °C) |
+| Technology | Water-to-water & air-to-water heat pumps | Modular ASHP at ventilation nodes |
+| **COP** | **3.8+** | **3.0** |
+| Output | 60–90 °C boiler feedwater | 50 °C space heating, 60 °C domestic hot water |
+| Payback | 4.9–7 years | 7–10 years |
+| Source doc | [pitch deck](../assets/decks/astemlab-pitch-deck.pdf) | [metro study](../assets/decks/astem-baku-metro-heat-recovery.pdf) |
 
-## Efficiency model
+## Efficiency models
+
+**Industrial — COP 3.8+**
 
 ```
-1.0 kWh electricity
-+ 2.8 kWh recovered waste heat
-────────────────────────────────
-= 3.8 kWh usable thermal output     (COP 3.8+)
+1.0 kWh electricity + 2.8 kWh recovered waste heat = 3.8 kWh thermal (60–90 °C)
 ```
 
-**Why it beats a standard ASHP:** a conventional air-source heat pump pulls from
-0 °C winter air — high electricity demand, low efficiency. Astem pulls from a
-stable 20 °C–40 °C industrial effluent / tunnel air source — low electricity
-demand, high efficiency, high profitability.
+**Urban / metro — COP 3.0**
+
+```
+1 unit electricity + 2 units ambient tunnel heat (20 °C) = 3 units thermal (60–80 °C)
+```
+
+**Why both beat a standard ASHP:** a conventional air-source heat pump pulls from
+0 °C winter air — high electricity demand, low efficiency, high cost. Astem pulls
+from a stable 20–40 °C source — low electricity demand, high efficiency, high
+profitability.
+
+> ⚠️ Do not advertise "COP 3.8+" on metro content or "COP 3.0" on industrial
+> content. Label which case each number belongs to.
+
+## Baku Metro — measured (2025)
+
+Full dataset and the model behind it: [09-metro-dataset.md](09-metro-dataset.md).
+
+| Metric | Value |
+|---|---|
+| Measured stations | 27 (98 mapped exits) |
+| Total daily passengers | 2,153,000 |
+| Passengers per station | 8.3 million/year — vs London's 3.7 million |
+| Gross waste heat | 722,544 kW |
+| **Recoverable heat** | **541,908 kW** |
+| Annual energy recovered | 2,373,557 MWh |
+| Annual CO₂ avoided | 474,711.4 tons |
+| Equivalent homes heated | 237,356 |
+| Tunnel air temperature | 18–30 °C year-round |
+| Ventilators currently in use | 82 (energy-intensive — the incumbent cost) |
+
+Derivation constants — **publish these next to any calculator**: recovery factor
+0.75 · 4,380 operating hours/yr · 200 kg CO₂/MWh · 10 MWh per home per year.
+
+## Industrial portfolio (pitch deck)
+
+| Metric | Value |
+|---|---|
+| Recoverable thermal potential | 500,000+ kW |
+| Annual clean energy recycled | 2,000,000+ MWh |
+| Scope 1 CO₂ reduction | 400,000+ tons/yr |
+| Natural gas offset | Millions of m³/yr |
+
+> ⚠️ **Unresolved inconsistency.** The deck presents 500,000+ kW as the
+> *combined* industrial + urban potential, but the metro alone measures
+> 541,908 kW — which already exceeds it. Either the combined figure is stale, or
+> it refers to industrial assets only. The deck's 2,000,000+ MWh and 400,000+ t
+> CO₂ also match the metro-only figures almost exactly, suggesting the headline
+> numbers are the metro study's, relabelled. **We need the real industrial figure
+> before publishing a combined total.** Tracked as Q15 in
+> [`collab/003-questions-for-isa.md`](../collab/003-questions-for-isa.md).
 
 ## Named thermal hotspots
 
@@ -38,37 +82,41 @@ demand, high efficiency, high profitability.
 | Heydar Aliyev Oil Refinery | Industrial | Cooling towers & effluent loops |
 | SOCAR Polymer & Carbamide | Industrial | Process steam vents & secondary cooling |
 | Sumgayit Chemical Industrial Park (SCIP) | Industrial park | Clustered manufacturing waste-heat nodes |
-| Baku Metro transit hubs | Urban | **541,908 kW** urban potential |
+| SOCAR Tower | Facility | Administrative complex heat/cooling demand |
+| Baku Metro | Urban | 27 stations, 541,908 kW recoverable |
 
-**Baku Metro specifics:** 27 measured stations · 8.3 million passengers per
-station (more than double London's density) · 18 °C–30 °C stable tunnel air
-year-round.
-
-**Industrial source range:** 18 °C–40 °C+ from cooling towers and liquid process
-effluent, discharged 24/7.
+All of the above are cleared for public use — see
+[`collab/DECISIONS.md`](../collab/DECISIONS.md) decision 010.
 
 ## Standard modular pilot — 1.8 MW
+
+Identical capacity figures in both decks; **only the payback differs**.
 
 | Spec | Value |
 |---|---|
 | Thermal capacity | 1.8 MW per module |
 | Annual energy saved | 11.9 GWh |
 | Annual cost savings | 476,000 AZN (≈ $280,000 USD) |
-| Payback period | 4.9 – 7 years |
+| Payback — industrial | 4.9 – 7 years |
+| Payback — metro | 7 – 10 years |
 
 **Pilot deployment range:** 150 kW – 1.8 MW, sited at a refinery stream or an
-administrative complex (e.g. SOCAR Tower), to validate performance before
-portfolio-wide scale-up.
+administrative complex, to validate the AI digital twin before portfolio-wide
+scale-up.
+
+> ⚠️ The pitch deck also claims "**< 5 years** average project payback" as a
+> headline. That is the optimistic end of the industrial range and contradicts
+> the metro study's 7–10 years. **Do not use "< 5 years" as a site-wide
+> headline.** Quote the range that belongs to the case being discussed. Tracked
+> as Q16 in [`collab/003-questions-for-isa.md`](../collab/003-questions-for-isa.md).
 
 ## Global precedents
 
-Modeled on **London Bunhill 2** (Underground heat recovery, 500+ homes heated)
-and **Warsaw M2** metro heat-recovery systems. Useful third-party credibility on
-the website — the concept is proven, the AI control layer is the new part.
+**London Bunhill 2** (Underground heat recovery, 500+ homes heated) and
+**Warsaw M2**. Useful third-party credibility — the concept is proven abroad;
+the AI control layer and the Baku measurement set are what is new here.
 
 ## Live Impact Calculator
-
-An interactive widget letting plant operators and engineers model their own case.
 
 **Inputs (sliders)**
 1. Available thermal waste stream volume — kW / MW
@@ -79,7 +127,10 @@ An interactive widget letting plant operators and engineers model their own case
 - Estimated natural gas cost savings — USD / AZN
 - Projected CO₂ emissions avoided — metric tons
 
-Drive the calculation from the COP 3.8+ model above. **When the calculator is
-built, document its formulas and constants (gas price per m³, boiler efficiency,
-emission factor, AZN/USD rate) back into this file** so every published result is
-auditable. Unaudited numbers are a liability with this audience.
+Use the metro constants above as defaults, and let the user pick industrial
+(COP 3.8) or urban (COP 3.0) mode. **Show the formula.** One missing gas price
+assumption is enough for a plant engineer to discard the whole site.
+
+> The gas price and boiler efficiency used for the AZN savings figure are not
+> documented in any source material. They must be established and recorded here
+> before the calculator publishes a manat number.

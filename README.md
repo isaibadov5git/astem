@@ -12,6 +12,7 @@ and the specification for the official website.
 ```
 astem/
 ├── docs/          Modular documentation — start at docs/README.md
+├── data/          Baku Metro measurements (27 stations, 98 exits)
 ├── collab/        Async planning channel with the project lead (Azerbaijani)
 ├── prompts/       AI-builder prompts kept verbatim for reproducibility
 ├── WORKLOG.md     What happened in each work session
@@ -26,6 +27,7 @@ astem/
 - **What the company does** → [docs/01-company-overview.md](docs/01-company-overview.md)
 - **How the technology works** → [docs/02-technology.md](docs/02-technology.md)
 - **Numbers to quote** → [docs/04-metrics-and-feasibility.md](docs/04-metrics-and-feasibility.md)
+- **Baku Metro dataset** → [docs/09-metro-dataset.md](docs/09-metro-dataset.md)
 - **Building the website** → [docs/07-website-spec.md](docs/07-website-spec.md)
 - **Full index** → [docs/README.md](docs/README.md)
 - **Website plan & open questions** → [collab/001-website-plan.md](collab/001-website-plan.md)
@@ -33,9 +35,10 @@ astem/
 
 ## Status
 
-**Planning.** Documentation and assets only — no application code yet.
-The website plan is written and awaiting decisions from the project lead; see
-[collab/002-questions-for-isa.md](collab/002-questions-for-isa.md).
+**Planning, approved.** Documentation, data and assets only — no application code
+yet. Brand, design direction, languages, hosting and contact details are settled
+([collab/DECISIONS.md](collab/DECISIONS.md)); scope for the 10 September deadline
+is the open question ([collab/003-questions-for-isa.md](collab/003-questions-for-isa.md)).
 
-⚠️ `assets/decks/astem-baku-metro-heat-recovery.pdf` is corrupted and needs
-re-uploading — [docs/08-assets-inventory.md](docs/08-assets-inventory.md).
+Two constraints to know before building: supporter logos may not be published,
+and the current logo is unlicensed — [docs/08-assets-inventory.md](docs/08-assets-inventory.md).

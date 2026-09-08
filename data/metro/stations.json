@@ -1,0 +1,245 @@
+[
+  {
+    "name": "Khojasan",
+    "name_az": "Xocəsən",
+    "latitude": 40.421499,
+    "longitude": 49.778066,
+    "avg_daily_passengers": 18000,
+    "line": "Purple Line",
+    "depth": 0
+  },
+  {
+    "name": "Avtovaghzal",
+    "name_az": "Avtovağzal",
+    "latitude": 40.42096675,
+    "longitude": 49.79564175,
+    "avg_daily_passengers": 42000,
+    "line": "Purple Line",
+    "depth": 25
+  },
+  {
+    "name": "Memar Ajami",
+    "name_az": "Memar Əcəmi",
+    "latitude": 40.411137749999995,
+    "longitude": 49.81498925,
+    "avg_daily_passengers": 95000,
+    "line": "Green Line",
+    "depth": 15
+  },
+  {
+    "name": "Memar Ajami 2",
+    "name_az": "Memar Əcəmi 2",
+    "latitude": 40.410540999999995,
+    "longitude": 49.8128195,
+    "avg_daily_passengers": 55000,
+    "line": "Purple Line",
+    "depth": 25
+  },
+  {
+    "name": "8 Novabr",
+    "name_az": "8 Noyabr",
+    "latitude": 40.401998999999996,
+    "longitude": 49.82057625,
+    "avg_daily_passengers": 52000,
+    "line": "Purple Line",
+    "depth": 20
+  },
+  {
+    "name": "Nasimi",
+    "name_az": "Nəsimi",
+    "latitude": 40.424457000000004,
+    "longitude": 49.825326749999995,
+    "avg_daily_passengers": 42000,
+    "line": "Green Line",
+    "depth": 20
+  },
+  {
+    "name": "Azadliq prospekti",
+    "name_az": "Azadlıq prospekti",
+    "latitude": 40.42558525,
+    "longitude": 49.84183125,
+    "avg_daily_passengers": 64000,
+    "line": "Green Line",
+    "depth": 20
+  },
+  {
+    "name": "Darnagul",
+    "name_az": "Dərnəgül",
+    "latitude": 40.42527825,
+    "longitude": 49.86171125,
+    "avg_daily_passengers": 38000,
+    "line": "Green Line",
+    "depth": 20
+  },
+  {
+    "name": "20 Yanvar",
+    "name_az": "20 Yanvar",
+    "latitude": 40.403652571428566,
+    "longitude": 49.80757185714286,
+    "avg_daily_passengers": 110000,
+    "line": "Green Line",
+    "depth": 25
+  },
+  {
+    "name": "Insahatchilar",
+    "name_az": "İnşaatçılar",
+    "latitude": 40.390191,
+    "longitude": 49.80264675,
+    "avg_daily_passengers": 92000,
+    "line": "Green Line",
+    "depth": 25
+  },
+  {
+    "name": "Elmler Akademiyasi",
+    "name_az": "Elmlər Akademiyası",
+    "latitude": 40.375192399999996,
+    "longitude": 49.8127428,
+    "avg_daily_passengers": 105000,
+    "line": "Green Line",
+    "depth": 65
+  },
+  {
+    "name": "Nizami",
+    "name_az": "Nizami",
+    "latitude": 40.37919,
+    "longitude": 49.830063,
+    "avg_daily_passengers": 68000,
+    "line": "Green Line",
+    "depth": 40
+  },
+  {
+    "name": "28 May",
+    "name_az": "28 May",
+    "latitude": 40.381211,
+    "longitude": 49.847822,
+    "avg_daily_passengers": 140000,
+    "line": "Red Line",
+    "depth": 45
+  },
+  {
+    "name": "Ganjlik",
+    "name_az": "Gənclik",
+    "latitude": 40.40040716666666,
+    "longitude": 49.851419,
+    "avg_daily_passengers": 115000,
+    "line": "Red Line",
+    "depth": 25
+  },
+  {
+    "name": "Nariman Narimanov",
+    "name_az": "Nəriman Nərimanov",
+    "latitude": 40.40267475,
+    "longitude": 49.87020275,
+    "avg_daily_passengers": 112000,
+    "line": "Red Line",
+    "depth": 25
+  },
+  {
+    "name": "Ulduz",
+    "name_az": "Ulduz",
+    "latitude": 40.41478575,
+    "longitude": 49.891472,
+    "avg_daily_passengers": 42000,
+    "line": "Red Line",
+    "depth": 20
+  },
+  {
+    "name": "Koroglu",
+    "name_az": "Koroğlu",
+    "latitude": 40.420514142857144,
+    "longitude": 49.917811285714286,
+    "avg_daily_passengers": 180000,
+    "line": "Red Line",
+    "depth": 20
+  },
+  {
+    "name": "Gara Garayev",
+    "name_az": "Qara Qarayev",
+    "latitude": 40.41761283333333,
+    "longitude": 49.9337505,
+    "avg_daily_passengers": 88000,
+    "line": "Red Line",
+    "depth": 20
+  },
+  {
+    "name": "Neftchilar",
+    "name_az": "Neftçilər",
+    "latitude": 40.41066883333333,
+    "longitude": 49.942929166666666,
+    "avg_daily_passengers": 98000,
+    "line": "Red Line",
+    "depth": 20
+  },
+  {
+    "name": "Khalglar Dostlughu",
+    "name_az": "Xalqlar Dostluğu",
+    "latitude": 40.3976875,
+    "longitude": 49.952399,
+    "avg_daily_passengers": 82000,
+    "line": "Red Line",
+    "depth": 20
+  },
+  {
+    "name": "Akhmedli",
+    "name_az": "Əhmədli",
+    "latitude": 40.38515475,
+    "longitude": 49.9539775,
+    "avg_daily_passengers": 85000,
+    "line": "Red Line",
+    "depth": 20
+  },
+  {
+    "name": "Hazi Aslanov",
+    "name_az": "Həzi Aslanov",
+    "latitude": 40.3732098,
+    "longitude": 49.953522,
+    "avg_daily_passengers": 72000,
+    "line": "Red Line",
+    "depth": 20
+  },
+  {
+    "name": "Sahil",
+    "name_az": "Sahil",
+    "latitude": 40.371751,
+    "longitude": 49.844644,
+    "avg_daily_passengers": 95000,
+    "line": "Red Line",
+    "depth": 40
+  },
+  {
+    "name": "Icherisheher",
+    "name_az": "İçərişəhər",
+    "latitude": 40.365899,
+    "longitude": 49.831529,
+    "avg_daily_passengers": 88000,
+    "line": "Red Line",
+    "depth": 40
+  },
+  {
+    "name": "Jafar Jabbarly",
+    "name_az": "Cəfər Cabbarlı",
+    "latitude": 40.3795965,
+    "longitude": 49.848969,
+    "avg_daily_passengers": 65000,
+    "line": "Green Line",
+    "depth": 45
+  },
+  {
+    "name": "Shah Ismail Khatai",
+    "name_az": "Şah İsmayıl Xətai",
+    "latitude": 40.383066,
+    "longitude": 49.871971,
+    "avg_daily_passengers": 78000,
+    "line": "Green Line",
+    "depth": 45
+  },
+  {
+    "name": "Bakmil",
+    "name_az": "Bakmil",
+    "latitude": 40.414152,
+    "longitude": 49.879007,
+    "avg_daily_passengers": 32000,
+    "line": "Red Line",
+    "depth": 0
+  }
+]

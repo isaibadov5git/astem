@@ -12,11 +12,15 @@ that owns the topic. Each fact has exactly one home — cross-link, don't copy.
 | 05 | [05-team-and-partners.md](05-team-and-partners.md) | Team roster, supporting institutions |
 | 06 | [06-brand-and-design.md](06-brand-and-design.md) | Colors, typography, logo, tone, motion |
 | 07 | [07-website-spec.md](07-website-spec.md) | Site structure, stack, section-by-section build spec |
-| 08 | [08-assets-inventory.md](08-assets-inventory.md) | Asset health, corrupted files, what is still missing |
+| 08 | [08-assets-inventory.md](08-assets-inventory.md) | Asset health, licence risks, what is still missing |
+| 09 | [09-metro-dataset.md](09-metro-dataset.md) | Baku Metro measurement set and the model constants behind it |
 
 ## Rules
 
-- Numbers live only in **04**. Everything else links to it.
+- Numbers live only in **04**. Everything else links to it. Raw measurements live
+  in `data/`, documented by **09**.
+- Industrial (COP 3.8+) and urban/metro (COP 3.0) figures are **not
+  interchangeable**. Always label which case a number belongs to.
 - Brand tokens live only in **06**.
 - **07** describes structure; it pulls its content from 01–06.
 - Prompts in [`../prompts/`](../prompts/) are historical inputs, not sources of truth.

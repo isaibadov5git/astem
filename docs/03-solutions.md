@@ -6,10 +6,10 @@ dense urban transit heat combine into a resilient, always-on thermal supply.
 ## Track A — Downstream Oil & Gas and Industrial Facilities
 
 **Assets:** Heydar Aliyev Oil Refinery · SOCAR Polymer & Carbamide ·
-Sumgayit Chemical Industrial Park (SCIP).
+Sumgayit Chemical Industrial Park (SCIP) · SOCAR Tower.
 
 **Focus**
-- Boiler feedwater pre-heating (60 °C–90 °C)
+- Boiler feedwater pre-heating (60–90 °C)
 - Industrial Cooling-as-a-Service (CaaS)
 - Clustered manufacturing waste-heat nodes with shared off-take
 
@@ -19,44 +19,60 @@ Sumgayit Chemical Industrial Park (SCIP).
 - Scope 1 carbon mitigation
 - Extended equipment lifespan
 
-## Track B — Urban Transit & Municipal Infrastructure
-
-**Assets:** Baku Metro — 27 measured stations, 541,908 kW urban potential.
-
-**Focus**
-- Subway / metro ventilation shaft heat recovery
-- Heat Purchase Agreements (HPAs) with municipal off-takers
-- 50 °C space heating and domestic hot water for administrative complexes
-
-**Benefit**
-- Year-round tunnel cooling (passenger comfort + equipment life)
-- Low-cost municipal space heating and domestic hot water
-
-**Reference study:** [`assets/decks/astem-baku-metro-heat-recovery.pdf`](../assets/decks/astem-baku-metro-heat-recovery.pdf)
-— ⚠️ currently unreadable, see [08-assets-inventory.md](08-assets-inventory.md).
-
-## Seasonal operating modes
-
-The system earns its keep in both halves of the year — a key argument against
-"this is just a winter product".
-
-| Winter Mode | Summer Mode |
-|---|---|
-| Refinery boiler feedwater pre-heating → direct gas OPEX cut | Carbon-free HVAC cooling for offices |
-| Facility space heating for administrative complexes | Asset thermal management — lowers ambient temperature around electrical and refinery equipment |
-| Efficient recovery from stable underground and process sources | Extends machinery lifespan while cooling stations and heating water |
-
-Framing: *prioritizes operational continuity and equipment longevity year-round.*
-
-## Commercial roadmap
+### Industrial roadmap
 
 | Phase | Client | Product | Value |
 |---|---|---|---|
-| **1 — Internal OPEX reduction** | Baku Metro & Heydar Aliyev Refinery | Boiler feedwater pre-heating & Cooling-as-a-Service | Cuts natural gas OPEX, extends equipment lifespan without relying on energy-intensive ventilation |
-| **2 — External commercialization** | Neighboring industrial park tenants | Thermal off-take & Heat Purchase Agreements | Sells upgraded 60 °C+ hot water cheaper than grid electricity or gas heating |
-| **3 — Decarbonization & carbon credits** | Government & global markets | Zero-emission heating & carbon credits | Aligns with SOCAR's Low-Carbon Development Strategy 2021–2030; unlocks subsidies and offset markets |
+| **1 — Internal OPEX reduction** | Baku Metro & Heydar Aliyev Refinery | Boiler feedwater pre-heating & Cooling-as-a-Service | Cuts gas OPEX, extends equipment lifespan without relying on energy-intensive ventilation |
+| **2 — External commercialisation** | Neighbouring industrial park tenants | Thermal off-take & Heat Purchase Agreements | Sells upgraded 60 °C+ hot water cheaper than grid electricity or gas heating |
+| **3 — Decarbonisation & carbon credits** | Government & global markets | Zero-emission heating & carbon credits | Aligns with SOCAR's Low-Carbon Development Strategy 2021–2030; unlocks subsidies and offset markets |
+
+## Track B — Urban Transit & Municipal Infrastructure
+
+**Asset:** Baku Metro — 27 measured stations, 98 mapped exits,
+**541,908 kW recoverable**. Full dataset: [09-metro-dataset.md](09-metro-dataset.md).
+
+**Focus**
+- Ventilation-shaft heat recovery via modular ASHP
+- Heat Purchase Agreements with municipal and commercial off-takers
+- 50 °C space heating and 60 °C domestic hot water
+
+**Benefit**
+- Year-round tunnel cooling — passenger comfort, equipment life, and relief for
+  the **82 energy-intensive ventilators** currently in service
+- Low-cost heat for nearby residential complexes and business centres
+
+### Metro roadmap
+
+| Phase | Client | Product | Value |
+|---|---|---|---|
+| **1 — Internal optimisation** | Baku Metro Authority | Cooling-as-a-Service | Reduces tunnel temperatures and extends equipment lifespan without relying solely on the 82 energy-intensive ventilators |
+| **2 — External commercialisation** | Nearby residential complexes & business centres | District heat | Sells upgraded 60 °C hot water below the cost of grid electricity or gas heating |
+| **3 — National integration** | Government & global markets | Zero-emission heating & carbon credits | Direct alignment with **Azerbaijan's 2030 Green Energy Goals**, unlocking subsidies and global carbon offset markets |
+
+**Reference study:** [`assets/decks/astem-baku-metro-heat-recovery.pdf`](../assets/decks/astem-baku-metro-heat-recovery.pdf)
+— 13 slides, restored 2026-09-08.
+
+### Why Baku beats the precedents
+
+| | London | Baku |
+|---|---|---|
+| Passengers per station | 3.7 million | **8.3 million** |
+
+Higher density means more waste heat per node, which means better economics on
+the same hardware. **London Bunhill 2** (500+ homes heated) and **Warsaw M2**
+prove the concept works; Baku's density is the argument that it works better here.
+
+## Commercial models
+
+| Model | Sector | Description |
+|---|---|---|
+| CaaS | Industrial & metro | Cooling sold as a service off the recovery loop |
+| HPA / district heat | Municipal & commercial | Long-term heat purchase agreement with the off-taker |
+| Carbon credits | Government & global | Phase 3 revenue, tied to national 2030 targets |
+| Modular pilot | Both | Standardised 1.8 MW unit — [04-metrics-and-feasibility.md](04-metrics-and-feasibility.md) |
 
 ## The ask
 
-Fund the industrial pilot → validate the AI digital twin → scale across the
-petrochemical portfolio.
+Fund the Phase 1 pilot → validate the AI digital twin → scale across the metro
+network and the petrochemical portfolio.

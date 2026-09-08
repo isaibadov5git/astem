@@ -5,6 +5,81 @@ sessions and between people. Newest session at the top. Append, never rewrite.
 
 ---
 
+## 2026-09-08 — Session 2 · Isa's answers, metro data recovered, docs realigned
+
+**Who:** Claude (with Fuad)
+
+### Done
+
+1. **Verified the replacement metro PDF.** Isa re-exported and uploaded it on
+   2026-09-07. It is clean — valid header, 13 pages, no corruption. Renamed to
+   the canonical `astem-baku-metro-heat-recovery.pdf`; the corrupted file is gone
+   from the working tree. It has no text layer, so pages were rendered and read
+   as images.
+
+2. **Read all 13 slides.** New material folded into docs: the metro track runs at
+   **COP 3.0** (not 3.8), delivers 50 °C heating / 60 °C DHW from 5–30 °C tunnel
+   air via modular ASHP, has its own 3-phase roadmap (Baku Metro Authority CaaS →
+   district heat to nearby buildings → carbon credits under Azerbaijan's 2030
+   Green Energy Goals), and displaces **82 energy-intensive ventilators**.
+   Baku 8.3M passengers/station vs London 3.7M.
+
+3. **Recovered the full station dataset.** Isa pointed at
+   `astem.vercel.app/metro-map`; the page is a client-rendered SPA, so the data
+   was pulled from its public `/api/stations`, `/api/exits` and `/api/statistics`
+   endpoints and snapshotted into [`data/metro/`](data/metro/) — 27 stations,
+   98 exits with coordinates, addresses and per-exit kW. The site no longer
+   depends on that prototype staying alive.
+
+4. **Reverse-engineered and verified the impact model.** Every published
+   aggregate reproduces exactly from four constants: recovery factor 0.75,
+   4,380 operating hours/yr, 200 kg CO₂/MWh, 10 MWh per home. Documented in
+   [docs/09-metro-dataset.md](docs/09-metro-dataset.md) — this is the
+   methodology the calculator must publish openly.
+
+5. **Realigned every doc** to Isa's answers (decisions 009–019).
+
+### Isa's answers — the consequential ones
+
+- Brand is **AstemLab**; legal/footer "Astem company"
+- **SOCAR and all named facilities and figures are cleared for public use** —
+  the confidentiality question that was blocking half the site is resolved
+- Design direction **B — Industrial Editorial**
+- **EN + AZ + RU**, EN default, Claude drafts translations
+- Deck becomes an **interactive page**, not a PDF download
+- Contact: public `astemlab.info@gmail.com`, form → `isaibadov5@gmail.com`
+- 🔴 **No permission for any supporter logo** → Supporters section cut from launch
+- 🔴 **Logo was taken from the internet** — unlicensed, treated as a placeholder
+- 🔴 **Deadline is 10 September 2026**
+
+### Conflicts found in the source material
+
+- **500,000+ kW** is presented in the pitch deck as combined industrial + urban,
+  but the metro alone measures **541,908 kW**. The deck's 2,000,000+ MWh and
+  400,000+ t CO₂ also match the metro-only figures — the headline numbers look
+  like the metro study's, relabelled. → Q15
+- **Payback disagrees three ways**: 4.9–7 yr (industrial deck), 7–10 yr (metro
+  deck), "< 5 years" (deck headline) — same 1.8 MW, same 11.9 GWh, same
+  476,000 AZN. → Q16. Decision taken not to publish "< 5 years" at all.
+- **COP 3.8+ vs COP 3.0** — genuinely different tracks, now labelled separately
+  everywhere rather than treated as one number.
+- Station name transliterations in the dataset are wrong in places
+  (`Insahatchilar` → İnşaatçılar, `8 Novabr` → 8 Noyabr). Use `name_az` for
+  display; fix the English before launch.
+
+### Open at end of session
+
+- 🔴 **Deadline is 2 days away** and the full plan does not fit. Q24 asks Isa to
+  choose scope: minimum site / minimum + heat map (recommended) / everything.
+- Q15–Q23 in [collab/003-questions-for-isa.md](collab/003-questions-for-isa.md)
+- No gas price or boiler efficiency → the calculator cannot yet publish an AZN
+  figure
+- No documented measurement method behind per-exit `heat_kw` — the weakest point
+  in front of a technical audience
+- **Still no implementation.** No `package.json`, no app code, by instruction.
+
+---
+
 ## 2026-08-31 — Session 1 · Repo structure, source extraction, website plan
 
 **Who:** Claude (with Fuad — fullstack dev)

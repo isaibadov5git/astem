@@ -3,7 +3,12 @@
 **Kimdən:** Claude (AI developer)
 **Kimə:** Isa Ibadov
 **Tarix:** 2026-08-31
-**Status:** 🟡 Təsdiq gözləyir — heç nə implement edilməyib
+**Status:** ✅ Təsdiqləndi (2026-09-08) — dizayn B, ad AstemLab, 3 dil.
+Qərarlar [`DECISIONS.md`](DECISIONS.md) 009–019-da. Kod hələ yazılmayıb.
+
+> ⚠️ **Deadline 10 sentyabrdır.** Bu plandakı mərhələlər bu müddətə sığmır —
+> nəyin buraxılacağı [`003-questions-for-isa.md`](003-questions-for-isa.md) Q24-də
+> soruşulur. Aşağıdakı bölmə 7 (mərhələlər) həmin cavabdan sonra yenidən yazılacaq.
 
 Bu sənəd nə qurmaq istədiyimi, niyə belə, və hansı seçimlərin sənə aid olduğunu
 izah edir. Oxu, razı olmadığın yerə şərh yaz, sonra
@@ -20,11 +25,14 @@ məlumatdan xeyli artıq şey var idi: SOCAR WIN proqramı, adı çəkilən akti
 stansiya / 541,908 kW, London Bunhill 2 və Varşava M2 presedentləri, qış/yay
 rejimləri, 3 mərhələli roadmap. Bunların hamısı indi `docs/`-dadır.
 
-**Bir problem tapdım:** `Astem_Baku_Metro_Heat_Recovery.pdf` **zədəlidir** —
-13 səhifənin hamısı boşdur. Fayl haradasa mətn kimi oxunub yenidən yazılıb və
-bütün binary baytları korlanıb (6.9 milyon dəfə UTF-8 "replacement character").
-Bərpa mümkün deyil, Canva-dan yenidən export lazımdır. Təfərrüat:
-[`docs/08-assets-inventory.md`](../docs/08-assets-inventory.md).
+**Zədəli metro PDF-i həll olundu** (2026-09-07 yenidən yükləndi, 2026-09-08
+yoxlandı — 13 səhifənin hamısı oxunur). Üstəlik `astem.vercel.app` API-dan
+27 stansiya və 98 çıxışın tam datası çıxarılıb repoya saxlandı:
+[`data/metro/`](../data/metro/), sənədi
+[`docs/09-metro-dataset.md`](../docs/09-metro-dataset.md).
+
+Yəni **3.1-dəki interaktiv xəritə üçün data artıq hazırdır** — bu, planın ən
+güclü elementi idi və indi ən tez qurula bilənidir.
 
 ---
 
@@ -98,8 +106,9 @@ Bu bir vizualda **bütün pitch-i** deyir: "Bakının altında 500 MW-lıq pulsu
 istilik var və biz onun harada olduğunu dəqiq bilirik". Heç bir rəqibin belə
 şeyi yoxdur, çünki heç kim ölçməyib.
 
-> Bunun üçün 27 stansiyanın kW cədvəli lazımdır (Q9). Yoxdursa, birinci
-> versiyada sadələşdirilmiş sxematik xəritə ilə başlayarıq.
+> ✅ **Data hazırdır** — 27 stansiya, 98 çıxış, koordinatlar, ünvanlar, hər
+> çıxış üçün kW. [`data/metro/`](../data/metro/). Bu element indi ən aşağı riskli
+> və ən yüksək təsirli işdir.
 
 ### ⭐ 3.2 ROI / Təsir kalkulyatoru
 

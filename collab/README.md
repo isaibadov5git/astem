@@ -38,7 +38,8 @@ işarəsini `[x]` et. Uzun izah lazım deyil — bir cümlə kifayətdir. Bilmir
 |---|---|
 | [DECISIONS.md](DECISIONS.md) | Qəbul edilmiş qərarların jurnalı — son söz burdadır |
 | [001-website-plan.md](001-website-plan.md) | Saytın tam planı: struktur, dizayn, texnologiya, mərhələlər |
-| [002-questions-for-isa.md](002-questions-for-isa.md) | **Isa üçün cavab gözləyən suallar** — işə başlamaq üçün lazımdır |
+| [002-questions-for-isa.md](002-questions-for-isa.md) | ✅ Birinci dövrə suallar — cavablandı |
+| [003-questions-for-isa.md](003-questions-for-isa.md) | 🔴 **İkinci dövrə suallar** — cavab gözləyir |
 
 ## Qaydalar
 
