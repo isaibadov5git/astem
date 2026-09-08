@@ -25,7 +25,8 @@ data, prompts and assets. The site will live in `web/`.
 | Plan, open questions, decisions | `collab/` — async channel with the project lead |
 | Asset health / what's missing | `docs/08-assets-inventory.md` |
 | Baku Metro measurements | `data/metro/` — documented by `docs/09-metro-dataset.md` |
-| Running or deploying the site | `docs/10-deployment.md` |
+| Putting the site on a server from scratch | `docs/10-deployment.md` |
+| **How the live site is deployed, and what it demands of the code** | `docs/11-live-deployment.md` |
 | Any figure **in the site** | `web/src/content/metrics.ts` — mirrors doc 04 |
 | Any site copy / translation | `web/src/content/i18n.ts` — English is the source |
 | Site colours and typography | `web/src/app/globals.css` |

@@ -5,6 +5,82 @@ sessions and between people. Newest session at the top. Append, never rewrite.
 
 ---
 
+## 2026-09-08 — Session 6 · The site is live
+
+**Who:** Claude (with Fuad)
+
+**https://astem.inmytime.me is serving.** EN/AZ/RU, valid certificate, all
+routes 200.
+
+### What was actually done
+
+Nothing in `web/` changed. The image that Session 4's workflow had already
+published (`sha-bbe320d`) was pulled onto Fuad's server and put behind its
+existing reverse proxy. The work was deployment, not development.
+
+Deliberately **not** done: the `deploy/` procedure in this repository. It assumes
+an empty machine with nginx and certbot and a clone in `/opt/astem`; the host
+this site landed on terminates TLS with a different proxy, runs application
+containers with no published ports, and updates itself from the registry. Using
+the repo's procedure there would have meant fighting the machine's design. The
+`deploy/` directory was left untouched — it is still correct for its own purpose
+and is now labelled as such.
+
+### Measured on the running container
+
+| | |
+|---|---|
+| Cold start | **156 ms** |
+| RAM at idle | **37–41 MB** (ceiling set to 256 MB) |
+| CPU at idle | 0.00 % |
+| Image pull | 5.7 s |
+| Certificate | Let's Encrypt, issued automatically within seconds |
+
+The 40 MB figure quoted in doc 10 since Session 4 held up.
+
+### The container is locked down further than the image
+
+Read-only root filesystem, in-memory `/tmp` and `.next/cache`, all Linux
+capabilities dropped, privilege escalation blocked, memory and process limits.
+The read-only filesystem worked first time — the site genuinely writes nothing at
+runtime, because every route is prerendered and `images.unoptimized` is set.
+
+**That is now a constraint on the code, not just a deployment detail**, and it
+fails at *runtime* rather than at build time. Adding `next/image` optimisation,
+ISR, an upload, or any server-side write would break the container while
+`npm run build` and `npm run typecheck` both stay green. Written up in the new
+doc so it is not discovered the hard way.
+
+### New doc
+
+[`docs/11-live-deployment.md`](docs/11-live-deployment.md) — what is actually
+running, how a push reaches it, the runtime constraints, rollback, and who fixes
+what when the site is down.
+
+Doc 10 was **not** rewritten. It is now explicitly the *generic* guide ("stand up
+your own copy") and doc 11 the *specific* one ("what production does"), with a
+banner at the top of 10 saying which is which and that 11 wins if they appear to
+disagree. `README.md`, `docs/README.md`, `CLAUDE.md` and `deploy/README.md` point
+at the split.
+
+### Two small things that would otherwise be rediscovered
+
+1. **`/` is a redirect, so the production health check probes `/en` directly** —
+   it does not follow redirects and wants a literal 200. `/en` is load-bearing in
+   a way nothing in this repository showed. If a real health endpoint is ever
+   added, the probe can move to it.
+2. **Next.js already sets `Cache-Control: public, max-age=31536000, immutable` on
+   `/_next/static/`.** The proxy was initially configured to set it too, which
+   produced the header twice in every response. Harmless, but the app is the
+   single source for it — the proxy rule was removed rather than the app's.
+
+### Nothing to shipped-code
+
+No `web/` changes, no content changes, no figures touched. The deployment used
+the existing image byte-for-byte.
+
+---
+
 ## 2026-09-08 — Session 5 · Assumptions written down; a self-inflicted data bug fixed
 
 **Who:** Claude (with Fuad)

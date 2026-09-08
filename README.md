@@ -14,7 +14,7 @@ astem/
 ├── web/           The website — Next.js 15, EN/AZ/RU
 ├── docs/          Modular documentation — start at docs/README.md
 ├── data/          Baku Metro measurements (27 stations, 98 exits)
-├── deploy/        server runbook, nginx config and the update script
+├── deploy/        "host it yourself" runbook, nginx config and update script
 ├── collab/        Async planning channel with the project lead (Azerbaijani)
 ├── prompts/       AI-builder prompts kept verbatim for reproducibility
 ├── WORKLOG.md     What happened in each work session
@@ -38,20 +38,31 @@ astem/
 
 ## The website
 
-Built and running. Next.js 15, fully static-generated, EN/AZ/RU, 27 prerendered
-routes. Containerised — the image idles at about 40 MB of RAM.
+**Live at https://astem.inmytime.me.** Next.js 15, fully static-generated,
+EN/AZ/RU, 27 prerendered routes. Containerised — it idles at about 40 MB of RAM
+and starts in 156 ms.
+
+Shipping a change is `git push origin main`. GitHub Actions builds and publishes
+the image; the production host picks it up on its own and the change is live a
+few minutes after the run turns green. There is no deploy command to run.
 
 ```bash
 cd web && npm install && npm run dev     # http://localhost:3000
 docker compose up                        # or, without installing Node
 ```
 
-**Putting it on a server:** [`deploy/RUNBOOK.az.md`](deploy/RUNBOOK.az.md) is the
-step-by-step guide in Azerbaijani — hand it to whoever runs the server.
-[`docs/10-deployment.md`](docs/10-deployment.md) is the same ground in English,
-with architecture, rollback and troubleshooting.
+**How the live site is deployed** — and, more importantly, the constraints it
+puts on the code (the container's filesystem is read-only) —
+[`docs/11-live-deployment.md`](docs/11-live-deployment.md). Read it before adding
+anything server-side.
 
-The server never builds anything: GitHub Actions publishes a container image to
+**Putting it on a *different* server:** [`deploy/RUNBOOK.az.md`](deploy/RUNBOOK.az.md)
+is a step-by-step guide in Azerbaijani, and
+[`docs/10-deployment.md`](docs/10-deployment.md) is the same ground in English.
+Both describe standing up your own copy from an empty machine, which is not how
+the live site got there.
+
+No server ever builds anything: GitHub Actions publishes a container image to
 GHCR and the server pulls it. No database, no API keys, nothing to back up.
 
 Two things are deliberately absent: supporter logos (no permission) and the

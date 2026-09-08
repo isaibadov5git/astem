@@ -14,7 +14,8 @@ that owns the topic. Each fact has exactly one home — cross-link, don't copy.
 | 07 | [07-website-spec.md](07-website-spec.md) | Site structure, stack, section-by-section build spec |
 | 08 | [08-assets-inventory.md](08-assets-inventory.md) | Asset health, licence risks, what is still missing |
 | 09 | [09-metro-dataset.md](09-metro-dataset.md) | Baku Metro measurement set and the model constants behind it |
-| 10 | [10-deployment.md](10-deployment.md) | Running the site locally, first-time server setup, updating |
+| 10 | [10-deployment.md](10-deployment.md) | Running the site locally, first-time server setup on **your own** machine, updating |
+| 11 | [11-live-deployment.md](11-live-deployment.md) | **The deployment that is actually live**, and the constraints it puts on the app |
 
 ## Rules
 
@@ -24,4 +25,7 @@ that owns the topic. Each fact has exactly one home — cross-link, don't copy.
   interchangeable**. Always label which case a number belongs to.
 - Brand tokens live only in **06**.
 - **07** describes structure; it pulls its content from 01–06.
+- **10 is generic, 11 is specific.** 10 tells you how to put this site on a server
+  from scratch; 11 describes the one it is running on now and what that machine
+  requires of the code. If they appear to disagree, 11 is what production does.
 - Prompts in [`../prompts/`](../prompts/) are historical inputs, not sources of truth.

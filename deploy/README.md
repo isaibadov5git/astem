@@ -1,6 +1,18 @@
 # deploy/
 
-Everything the server needs. Nothing here is used during development.
+Everything a server needs **if you are standing up your own copy** — a fresh
+machine, a staging box, or the day the site moves.
+
+> **This is not how the live site is deployed.** https://astem.inmytime.me runs
+> on a host that terminates TLS with its own proxy and updates itself from the
+> registry; none of the files here are used there, and shipping a change needs no
+> command from this directory. See
+> [`docs/11-live-deployment.md`](../docs/11-live-deployment.md).
+>
+> Kept because it is a complete, working path for any other machine, and because
+> it is the answer to "what would it take to move this somewhere else".
+
+Nothing here is used during development.
 
 | File | What it is |
 |---|---|

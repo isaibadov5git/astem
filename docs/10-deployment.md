@@ -7,6 +7,22 @@ first time; after that only **[Updating](#4-updating-the-site)** matters.
 An Azerbaijani copy-paste version of the same steps is in
 [`deploy/RUNBOOK.az.md`](../deploy/RUNBOOK.az.md).
 
+> ### This is the generic guide, not a description of production
+>
+> **The site is already live at https://astem.inmytime.me.** It was not put there
+> by the nginx + certbot procedure below, and nobody needs to run any of it to
+> ship a change — pushing to `main` is the whole workflow.
+>
+> Read **[11 — The Live Deployment](11-live-deployment.md)** for what is actually
+> running, how your push reaches it, and the runtime constraints it imposes on
+> the application (a read-only filesystem, among others — that one will bite you
+> at runtime, not at build time).
+>
+> This document keeps its value as the **"stand up your own copy"** path: a fresh
+> server, a staging box, a handover to a different operator, or the day the site
+> moves. Everything in it works; it is simply one valid way to host this image
+> rather than the way it is hosted today.
+
 ---
 
 ## 1. What you are deploying
