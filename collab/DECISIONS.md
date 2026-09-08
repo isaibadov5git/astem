@@ -26,6 +26,12 @@ Format: `YYYY-MM-DD · qərar · kim verdi · niyə`
 | 017 | 2026-09-08 | Əlaqə: public `astemlab.info@gmail.com`, forma → `isaibadov5@gmail.com`, LinkedIn var, telefon yox, ünvan "Bakı, Azərbaycan" | Isa | Q7 |
 | 018 | 2026-09-08 | 🔴 **Deadline: 10 sentyabr 2026** | Isa | Q13 |
 | 019 | 2026-09-08 | Metro datası `astem.vercel.app` API-dan çıxarılıb `data/metro/`-ya snapshot edildi (27 stansiya, 98 çıxış) | Claude | Q9 — data yalnız orada var idi, prototipdən asılılıq aradan qaldırıldı |
+| 020 | 2026-09-08 | **Isa-nın 003 sualları gözləmədən işə başlanır** — mövcud requirement-lərlə qurulur | Fuad | Deadline 10 sentyabr |
+| 021 | 2026-09-08 | **Next.js 15 App Router, tam SSG, `output: "standalone"`**, konteynerə 256 MB limit | Fuad | ~100 MB RAM əvəzinə gələcək backend eyni repo/eyni TypeScript-də olur |
+| 022 | 2026-09-08 | **Form `mailto:` ilə işləyir** — backend, API key, üçüncü tərəf servis yoxdur. Doldurulan sahələr subject+body-yə yığılır, istifadəçinin mail proqramı açılır. Əlavə "mətni kopyala" düyməsi | Isa → Fuad | Ən sadə həll; sıfır xərc, sıfır sirr, sıfır server yükü |
+| 023 | 2026-09-08 | Serverdə **mövcud nginx** reverse proxy kimi işlədilir; app `127.0.0.1:3000`-də dinləyir | Fuad | Server artıq qurulub |
+| 024 | 2026-09-08 | CI: **GitHub Actions → GHCR**, serverdə `docker compose pull && up -d` ilə yenilənir | Fuad | — |
+| 025 | 2026-09-08 | Deploy təlimatları `docs/`-a yazılır, serveri Isa/komanda özü qaldırır. Setup maksimum sadə, **UI isə yüksək keyfiyyətli** olmalıdır | Fuad | — |
 
 <!-- Yeni qərarlar bura əlavə olunur. Nömrələri artırmağı unutma. -->
 

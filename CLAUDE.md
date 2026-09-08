@@ -25,6 +25,10 @@ data, prompts and assets. The site will live in `web/`.
 | Plan, open questions, decisions | `collab/` — async channel with the project lead |
 | Asset health / what's missing | `docs/08-assets-inventory.md` |
 | Baku Metro measurements | `data/metro/` — documented by `docs/09-metro-dataset.md` |
+| Running or deploying the site | `docs/10-deployment.md` |
+| Any figure **in the site** | `web/src/content/metrics.ts` — mirrors doc 04 |
+| Any site copy / translation | `web/src/content/i18n.ts` — English is the source |
+| Site colours and typography | `web/src/app/globals.css` |
 
 ## Working agreement
 
@@ -72,6 +76,19 @@ redaction is needed.
    was obtained from any of them. The files in `assets/partners/` are for
    internal reference only. Naming the institutions in text is also unresolved
    (`collab/003-questions-for-isa.md` Q18).
-2. **The current logo as a permanent mark** — it was taken from the internet and
-   is unlicensed. Treat it as a placeholder: keep it behind a single asset
-   reference so it can be swapped in one edit.
+2. **The raster logo** — taken from the internet, unlicensed. It is not used in
+   the site at all; `web/src/components/Wordmark.tsx` carries an original inline
+   mark instead. Keep it that way until a licensed logo exists, and keep the mark
+   in that one component so swapping it stays a single edit.
+
+## Website conventions
+
+- **Numbers only from `metrics.ts`.** Never hardcode a figure in a component.
+- **Never blend the two cases.** Industrial is COP 3.8+/4.9–7 yr; metro is
+  COP 3.0/7–10 yr. Show them labelled and separate. The deck's "< 5 years"
+  headline is not used anywhere and should not be reintroduced.
+- **No manat savings figure** until the gas price and boiler efficiency are
+  documented in doc 04. The calculator explains the omission rather than hiding it.
+- **English is the source language**; `az` and `ru` are typed against it, so an
+  untranslated key fails `npm run typecheck`.
+- Adding a page means adding it to `sitemap.ts` and the header/footer link lists.

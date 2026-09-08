@@ -11,8 +11,10 @@ and the specification for the official website.
 
 ```
 astem/
+├── web/           The website — Next.js 15, EN/AZ/RU
 ├── docs/          Modular documentation — start at docs/README.md
 ├── data/          Baku Metro measurements (27 stations, 98 exits)
+├── deploy/        nginx config sample and the server update script
 ├── collab/        Async planning channel with the project lead (Azerbaijani)
 ├── prompts/       AI-builder prompts kept verbatim for reproducibility
 ├── WORKLOG.md     What happened in each work session
@@ -32,13 +34,27 @@ astem/
 - **Full index** → [docs/README.md](docs/README.md)
 - **Website plan & open questions** → [collab/001-website-plan.md](collab/001-website-plan.md)
 - **What's been done so far** → [WORKLOG.md](WORKLOG.md)
+- **Deploying** → [docs/10-deployment.md](docs/10-deployment.md)
+
+## The website
+
+Built and running. Next.js 15, fully static-generated, EN/AZ/RU, 27 prerendered
+routes. Containerised — the image idles at about 40 MB of RAM.
+
+```bash
+cd web && npm install && npm run dev     # http://localhost:3000
+docker compose up                        # or, without installing Node
+```
+
+Deployment, server setup and troubleshooting: [docs/10-deployment.md](docs/10-deployment.md).
+
+Two things are deliberately absent: supporter logos (no permission) and the
+raster logo (unlicensed, replaced by an original inline mark) —
+[docs/08-assets-inventory.md](docs/08-assets-inventory.md).
 
 ## Status
 
-**Planning, approved.** Documentation, data and assets only — no application code
-yet. Brand, design direction, languages, hosting and contact details are settled
-([collab/DECISIONS.md](collab/DECISIONS.md)); scope for the 10 September deadline
-is the open question ([collab/003-questions-for-isa.md](collab/003-questions-for-isa.md)).
-
-Two constraints to know before building: supporter logos may not be published,
-and the current logo is unlicensed — [docs/08-assets-inventory.md](docs/08-assets-inventory.md).
+Site built against the decisions in [collab/DECISIONS.md](collab/DECISIONS.md).
+Open questions for the project lead are in
+[collab/003-questions-for-isa.md](collab/003-questions-for-isa.md) — none of them
+block the site from going live.

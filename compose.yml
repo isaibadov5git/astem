@@ -1,0 +1,18 @@
+# Local development. Source is bind-mounted, so edits hot-reload.
+#   docker compose up
+services:
+  web:
+    image: node:22-alpine
+    working_dir: /app
+    command: sh -c "npm install && npm run dev -- -H 0.0.0.0"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./web:/app
+      - ./data:/data:ro
+      - web_node_modules:/app/node_modules
+    environment:
+      NEXT_TELEMETRY_DISABLED: "1"
+
+volumes:
+  web_node_modules:

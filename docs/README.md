@@ -14,6 +14,7 @@ that owns the topic. Each fact has exactly one home — cross-link, don't copy.
 | 07 | [07-website-spec.md](07-website-spec.md) | Site structure, stack, section-by-section build spec |
 | 08 | [08-assets-inventory.md](08-assets-inventory.md) | Asset health, licence risks, what is still missing |
 | 09 | [09-metro-dataset.md](09-metro-dataset.md) | Baku Metro measurement set and the model constants behind it |
+| 10 | [10-deployment.md](10-deployment.md) | Running the site locally, first-time server setup, updating |
 
 ## Rules
 

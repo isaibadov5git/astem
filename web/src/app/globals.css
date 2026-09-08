@@ -1,0 +1,539 @@
+@import "tailwindcss";
+
+/*
+ * AstemLab design system — "Industrial Editorial".
+ *
+ * Light, generously spaced, engineering-drawing aesthetic. Technology and Impact
+ * sections invert to a dark "telemetry" mode for contrast and rhythm.
+ * The logo's blue -> green gradient is the temperature language: cold source to
+ * hot output. It is never used as decorative wash.
+ */
+
+@theme {
+  --color-ink: #0f172a;
+  --color-ink-soft: #1e293b;
+  --color-ink-line: #334155;
+  --color-paper: #ffffff;
+  --color-paper-warm: #f8fafc;
+  --color-line: #e2e8f0;
+  --color-line-strong: #cbd5e1;
+  --color-muted: #64748b;
+  --color-muted-dark: #94a3b8;
+
+  --color-emerald: #00875a;
+  --color-emerald-bright: #0ea672;
+  --color-cyan: #0284c7;
+  --color-cyan-bright: #38bdf8;
+  --color-amber: #d97706;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", Menlo, Consolas, monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "tnum";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-emerald) 22%, transparent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  /* ---------- layout ---------- */
+
+  .shell {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .shell {
+      padding-inline: 2rem;
+    }
+  }
+
+  .section {
+    padding-block: 4.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .section {
+      padding-block: 7rem;
+    }
+  }
+
+  /* Dark "telemetry" section. Used for Technology and Impact. */
+  .telemetry {
+    background: var(--color-ink);
+    color: var(--color-paper-warm);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .telemetry :is(h1, h2, h3, h4) {
+    color: #fff;
+  }
+
+  .telemetry .muted {
+    color: var(--color-muted-dark);
+  }
+
+  /* Faint engineering grid, only inside dark sections. */
+  .telemetry::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image:
+      linear-gradient(to right, rgba(148, 163, 184, 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 90% 65% at 50% 0%, #000 40%, transparent 100%);
+  }
+
+  /* ---------- typography ---------- */
+
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-emerald);
+  }
+
+  .telemetry .eyebrow {
+    color: var(--color-cyan-bright);
+  }
+
+  .display {
+    font-size: clamp(2.25rem, 1.2rem + 4.6vw, 4.5rem);
+    line-height: 1.02;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+  }
+
+  .h2 {
+    font-size: clamp(1.75rem, 1.1rem + 2.4vw, 2.75rem);
+    line-height: 1.1;
+    font-weight: 700;
+  }
+
+  .h3 {
+    font-size: clamp(1.125rem, 0.95rem + 0.8vw, 1.375rem);
+    line-height: 1.25;
+    font-weight: 650;
+  }
+
+  .lede {
+    font-size: clamp(1.0625rem, 0.98rem + 0.42vw, 1.3125rem);
+    line-height: 1.55;
+    color: var(--color-muted);
+    max-width: 46rem;
+  }
+
+  .telemetry .lede {
+    color: var(--color-muted-dark);
+  }
+
+  .muted {
+    color: var(--color-muted);
+  }
+
+  .num {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    letter-spacing: -0.01em;
+  }
+
+  /* ---------- controls ---------- */
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.35rem;
+    border-radius: 0.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1;
+    transition: background-color 0.15s, color 0.15s, border-color 0.15s,
+      transform 0.15s;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .btn:active {
+    transform: translateY(1px);
+  }
+
+  .btn-primary {
+    background: var(--color-emerald);
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background: var(--color-emerald-bright);
+  }
+
+  .btn-ghost {
+    border: 1px solid var(--color-line-strong);
+    color: var(--color-ink);
+    background: transparent;
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--color-ink);
+    background: var(--color-paper-warm);
+  }
+
+  .telemetry .btn-ghost {
+    border-color: var(--color-ink-line);
+    color: var(--color-paper-warm);
+  }
+
+  .telemetry .btn-ghost:hover {
+    border-color: var(--color-muted-dark);
+    background: rgba(148, 163, 184, 0.1);
+  }
+
+  /* ---------- surfaces ---------- */
+
+  .card {
+    border: 1px solid var(--color-line);
+    border-radius: 0.75rem;
+    background: var(--color-paper);
+    padding: 1.5rem;
+  }
+
+  .telemetry .card {
+    border-color: var(--color-ink-line);
+    background: rgba(30, 41, 59, 0.55);
+    backdrop-filter: blur(6px);
+  }
+
+  .rule {
+    height: 1px;
+    background: var(--color-line);
+    border: 0;
+  }
+
+  .telemetry .rule {
+    background: var(--color-ink-line);
+  }
+
+  /* Blueprint corner ticks — the engineering-drawing cue. */
+  .ticked {
+    position: relative;
+  }
+
+  .ticked::before,
+  .ticked::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-color: var(--color-line-strong);
+    border-style: solid;
+  }
+
+  .ticked::before {
+    top: -1px;
+    left: -1px;
+    border-width: 1px 0 0 1px;
+  }
+
+  .ticked::after {
+    right: -1px;
+    bottom: -1px;
+    border-width: 0 1px 1px 0;
+  }
+
+  .telemetry .ticked::before,
+  .telemetry .ticked::after {
+    border-color: var(--color-ink-line);
+  }
+
+  /* ---------- data ---------- */
+
+  .stat-value {
+    font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.035em;
+  }
+
+  .stat-label {
+    font-size: 0.8125rem;
+    line-height: 1.35;
+    color: var(--color-muted);
+    margin-top: 0.5rem;
+  }
+
+  .telemetry .stat-label {
+    color: var(--color-muted-dark);
+  }
+
+  .thermal-text {
+    background: linear-gradient(
+      100deg,
+      var(--color-cyan) 0%,
+      var(--color-emerald) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .telemetry .thermal-text {
+    background: linear-gradient(
+      100deg,
+      var(--color-cyan-bright) 0%,
+      var(--color-emerald-bright) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  table.data {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  table.data th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    padding: 0.625rem 0.75rem;
+    border-bottom: 1px solid var(--color-line-strong);
+  }
+
+  table.data td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--color-line);
+    vertical-align: top;
+  }
+
+  table.data tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .telemetry table.data th {
+    color: var(--color-muted-dark);
+    border-color: var(--color-ink-line);
+  }
+
+  .telemetry table.data td {
+    border-color: rgba(51, 65, 85, 0.6);
+  }
+
+  .scroll-x {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* ---------- inputs ---------- */
+
+  .field {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid var(--color-line-strong);
+    border-radius: 0.5rem;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-size: 0.9375rem;
+    font-family: inherit;
+  }
+
+  .field::placeholder {
+    color: var(--color-muted);
+  }
+
+  .field:focus {
+    border-color: var(--color-cyan);
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-cyan) 16%, transparent);
+  }
+
+  .label {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(
+      90deg,
+      var(--color-cyan) 0%,
+      var(--color-emerald) 100%
+    );
+    outline: none;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background: #fff;
+    border: 2px solid var(--color-emerald);
+    cursor: grab;
+    box-shadow: 0 1px 6px rgba(15, 23, 42, 0.28);
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: #fff;
+    border: 2px solid var(--color-emerald);
+    cursor: grab;
+  }
+
+  /* ---------- misc ---------- */
+
+  .link-underline {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--color-line-strong);
+    transition: text-decoration-color 0.15s;
+  }
+
+  .link-underline:hover {
+    text-decoration-color: currentColor;
+  }
+
+  .flow > * + * {
+    margin-top: 1rem;
+  }
+}
+
+/* MapLibre needs its controls to sit above our own chrome, and its default
+   light popups are illegible against the dark telemetry ground. */
+.maplibregl-map {
+  font: inherit;
+}
+
+.maplibregl-ctrl-group {
+  border-radius: 0.5rem !important;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- thermal loop animation ---------- */
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -84;
+  }
+}
+
+@keyframes soft-pulse {
+  0%,
+  100% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.13;
+  }
+}
+
+.flow {
+  stroke-dasharray: 14 70;
+  animation: flow-dash 3.2s linear infinite;
+}
+
+.pulse {
+  animation: soft-pulse 4s ease-in-out infinite;
+}
+
+/* ---------- scroll reveal ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal[data-shown="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

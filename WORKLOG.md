@@ -5,6 +5,80 @@ sessions and between people. Newest session at the top. Append, never rewrite.
 
 ---
 
+## 2026-09-08 — Session 3 · Website built
+
+**Who:** Claude (with Fuad)
+
+Instruction: stop waiting on the project lead's second round of questions and
+build against what is already decided.
+
+### Built
+
+`web/` — Next.js 15 App Router, TypeScript, Tailwind v4, fully static-generated.
+**27 prerendered routes**: 8 pages × EN/AZ/RU. Verified building and running in
+Docker.
+
+| Page | What is on it |
+|---|---|
+| `/` | Hero with an animated thermal-loop SVG, metric ticker, the paradox, the measured-evidence block |
+| `/technology` | Four-stage industrial pipeline, urban ASHP pipeline, proportional COP comparison, winter/summer toggle |
+| `/solutions` | Industrial / urban tabs with roadmaps, Baku-vs-London density chart |
+| `/impact` | Interactive MapLibre heat map of all 27 stations, calculator, full station table |
+| `/feasibility` | 1.8 MW module specs, payback split by case, precedents |
+| `/about` | Team names and roles, scientific base, evidence counts |
+| `/deck` | The investor narrative as a page, not a PDF |
+| `/contact` | Form that composes a message into the visitor's own mail client |
+
+### Decisions taken with Fuad
+
+- Next.js standalone over static export — 5 MB of RAM traded for keeping a future
+  backend in the same repo and language
+- Site code in `web/`, own server, `astem.inmytime.me`, existing nginx in front
+- **Contact form via `mailto:`** — the project lead said email delivery was not
+  important, so there is no backend, no API key and no third-party processor.
+  A copy-to-clipboard fallback covers webmail-only visitors
+- GitHub Actions → GHCR, server pulls with `deploy/update.sh`
+
+Recorded as decisions 020–025 in [collab/DECISIONS.md](collab/DECISIONS.md).
+
+### Measured, not estimated
+
+Docker image **346 MB**; container idles at **~40 MB RAM** against a 256 MB limit.
+Shared first-load JS **103 kB**; the map is lazy-loaded so only `/impact` pays for
+MapLibre.
+
+### Judgement calls worth knowing about
+
+- **The raster logo is not used anywhere.** It was taken from the internet with no
+  licence, so shipping it would put an unlicensed mark on every page. The header
+  uses an original inline SVG (`Wordmark.tsx`) built on the same idea — A
+  monogram, thermal curve, blue→green. One file to swap when a licensed logo
+  exists.
+- **No supporter logos**, per decision 014.
+- **No manat savings figure in the calculator.** The gas price and boiler
+  efficiency behind 476,000 AZN are undocumented; publishing a number we cannot
+  defend to a plant engineer is worse than publishing none. The calculator says
+  so explicitly in its methodology panel.
+- **Payback is always shown as two labelled cases**, never blended, and the
+  deck's "< 5 years" headline is not used anywhere.
+- **Station transliterations corrected** on read (`Insahatchilar` → İnşaatçılar,
+  `8 Novabr` → 8 Noyabr, and the rest) — the raw dataset spellings would have
+  been noticed immediately by a Baku reader.
+- **System font stack, no web font.** A build-time font download is one more way
+  a self-hosted deploy can fail, for very little gain.
+
+### Still open
+
+- Isa's second round ([collab/003-questions-for-isa.md](collab/003-questions-for-isa.md))
+  — none of it blocks launch, but Q15 (industrial kW), Q16 (payback), Q20 (logo
+  licence) and Q22 (how `heat_kw` was measured) all affect what the site can
+  claim
+- Server specifics: DNS record, first `docker compose up`, nginx vhost, certbot —
+  all documented in [docs/10-deployment.md](docs/10-deployment.md), none done yet
+- No `og:image`; social previews will fall back to text
+
+---
+
 ## 2026-09-08 — Session 2 · Isa's answers, metro data recovered, docs realigned
 
 **Who:** Claude (with Fuad)

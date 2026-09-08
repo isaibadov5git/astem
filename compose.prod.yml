@@ -1,0 +1,19 @@
+# Production. Pulls the image built by GitHub Actions and listens on localhost
+# only — the server's existing nginx terminates TLS and proxies to it.
+#   docker compose -f compose.prod.yml pull
+#   docker compose -f compose.prod.yml up -d
+services:
+  web:
+    image: ghcr.io/isaibadov5git/astem-web:latest
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+    mem_limit: 256m
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
