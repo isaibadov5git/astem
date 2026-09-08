@@ -14,7 +14,7 @@ astem/
 ├── web/           The website — Next.js 15, EN/AZ/RU
 ├── docs/          Modular documentation — start at docs/README.md
 ├── data/          Baku Metro measurements (27 stations, 98 exits)
-├── deploy/        nginx config sample and the server update script
+├── deploy/        server runbook, nginx config and the update script
 ├── collab/        Async planning channel with the project lead (Azerbaijani)
 ├── prompts/       AI-builder prompts kept verbatim for reproducibility
 ├── WORKLOG.md     What happened in each work session
@@ -46,7 +46,13 @@ cd web && npm install && npm run dev     # http://localhost:3000
 docker compose up                        # or, without installing Node
 ```
 
-Deployment, server setup and troubleshooting: [docs/10-deployment.md](docs/10-deployment.md).
+**Putting it on a server:** [`deploy/RUNBOOK.az.md`](deploy/RUNBOOK.az.md) is the
+step-by-step guide in Azerbaijani — hand it to whoever runs the server.
+[`docs/10-deployment.md`](docs/10-deployment.md) is the same ground in English,
+with architecture, rollback and troubleshooting.
+
+The server never builds anything: GitHub Actions publishes a container image to
+GHCR and the server pulls it. No database, no API keys, nothing to back up.
 
 Two things are deliberately absent: supporter logos (no permission) and the
 raster logo (unlicensed, replaced by an original inline mark) —

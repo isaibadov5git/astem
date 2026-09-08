@@ -14,10 +14,10 @@
 | Legal / footer name | Astem company |
 | Origin | SOCAR WIN Open Innovation Program (investor pitch) |
 
-> ⚠️ **Open naming decision.** The logo file reads `ASTEM`, the pitch deck says
-> `ASTEM`, the website prompt says `AstemLab`, the repo is `astem`. One name must
-> win before any UI is built. Tracked in
-> [`collab/002-open-questions.md`](../collab/002-open-questions.md).
+Resolved 2026-09-08: the public brand is **AstemLab**, the legal/footer name is
+"Astem company" ([`collab/DECISIONS.md`](../collab/DECISIONS.md) decision 009).
+The decks, the logo mark and the repository still read `ASTEM` — historical, do
+not propagate. Naming and brand rules: [06-brand-and-design.md](06-brand-and-design.md).
 
 ## Mission
 

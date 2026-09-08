@@ -5,6 +5,33 @@ sessions and between people. Newest session at the top. Append, never rewrite.
 
 ---
 
+## 2026-09-08 — Session 4 · Deployment documentation
+
+**Who:** Claude (with Fuad)
+
+Wrote the handover documentation so the site can be given to whoever runs the
+server without a conversation.
+
+- [`deploy/RUNBOOK.az.md`](deploy/RUNBOOK.az.md) — Azerbaijani, copy-paste, start
+  to finish: architecture, where the image comes from, Docker install, DNS,
+  nginx, certbot, firewall, verification checklist, reboot test, updating,
+  rollback, daily commands, troubleshooting table
+- [`docs/10-deployment.md`](docs/10-deployment.md) — the English reference,
+  same ground plus environment variables and where to change content
+- [`deploy/README.md`](deploy/README.md) — index and a 30-second version
+
+The thing most likely to block a first deploy is called out prominently in both:
+**a GHCR package published by Actions is private by default even when the repo is
+public**, so the first `docker compose pull` fails with `denied` until someone
+either makes the package public or runs `docker login ghcr.io` on the server.
+
+Also fixed while verifying: a stale "open naming decision" warning still sat in
+`docs/01-company-overview.md` pointing at a renamed file, months after decision
+009 settled the name. Every relative link and in-page anchor across all 23
+markdown files is now verified.
+
+---
+
 ## 2026-09-08 — Session 3 · Website built
 
 **Who:** Claude (with Fuad)
