@@ -5,6 +5,55 @@ sessions and between people. Newest session at the top. Append, never rewrite.
 
 ---
 
+## 2026-09-08 — Session 5 · Assumptions written down; a self-inflicted data bug fixed
+
+**Who:** Claude (with Fuad)
+
+### The main deliverable
+
+[`collab/004-status-and-open-items.md`](collab/004-status-and-open-items.md) —
+one document showing the project lead what was built, **every decision taken in
+the absence of his answers**, and what changes when each is answered. Twelve
+items (B1–B12), each written as: what I did → why → what changes if you say
+otherwise. None of them block launch.
+
+Mirrored as decisions A1–A10 in [`collab/DECISIONS.md`](collab/DECISIONS.md).
+
+### Verified rather than assumed
+
+Grepped the built HTML instead of trusting my own notes:
+
+- The disputed industrial figures (500,000 kW / 2,000,000 MWh / 400,000 t)
+  render **nowhere** ✓
+- UFAZ / ASOIU / IDDA / Enterprise Azerbaijan appear **nowhere** ✓
+- "< 5 years" appears **nowhere** ✓
+- SOCAR and the named facilities **do** appear, per decision 010 ✓
+
+One correction to something I said last session: I described the calculator as
+publishing no manat figure, which is true — but **476,000 AZN does appear on the
+home, feasibility and deck pages** as the quoted 1.8 MW pilot result. So the site
+does publish a manat number whose derivation we cannot yet explain; it is just
+not computed by the calculator. Recorded as B4 rather than left implied.
+
+`INDUSTRIAL.portfolio` in `metrics.ts` is dead data by design — annotated in
+place explaining it must not be rendered until Q15 is answered.
+
+### A bug I introduced, found and removed
+
+Last session I added a `NAME_FIXES` map to "correct" station transliterations.
+Checking it properly this time: **26 of its 27 entries were byte-identical to the
+dataset's own `name_az`**, and the twenty-seventh was wrong — I had written
+`Xocasan` where the data correctly says `Xocəsən`.
+
+The map was pure redundancy plus one error, so it is gone. Azerbaijani names now
+come straight from the dataset; only two genuinely broken English spellings are
+corrected. Verified in the built HTML for both locales.
+
+Lesson recorded in [docs/09-metro-dataset.md](docs/09-metro-dataset.md): correct
+the data, not the rendering.
+
+---
+
 ## 2026-09-08 — Session 4 · Deployment documentation
 
 **Who:** Claude (with Fuad)

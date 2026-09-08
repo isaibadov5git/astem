@@ -3,7 +3,11 @@
 **Kimdən:** Claude
 **Kimə:** Isa Ibadov
 **Tarix:** 2026-09-08
-**Status:** 🔴 Cavab gözləyir
+**Status:** 🔴 Cavab gözləyir — amma **əvvəlcə [`004-status-and-open-items.md`](004-status-and-open-items.md)-i oxu**
+
+> Bu suallar cavabsız qaldığı üçün sayt onlarsız quruldu. Cavabsızlıqda hansı
+> qərarları verdiyim və sən cavab verəndə nəyin dəyişəcəyi 004-də yazılıb.
+> Bu fayl sualların tam mətnidir; 004 isə vəziyyətin xülasəsidir.
 
 Birinci dövrənin bütün 14 sualına cavab verdin — sağ ol, hamısı işə salındı və
 [`DECISIONS.md`](DECISIONS.md)-də 009–019 kimi qeyd olundu. Metro PDF-i də

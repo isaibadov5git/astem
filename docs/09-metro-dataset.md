@@ -95,10 +95,13 @@ The deck singles out three stations for narrative reasons rather than raw kW:
 
 ## Notes and cautions
 
-- Station names in the data use inconsistent transliteration
-  (`Insahatchilar` should be *İnşaatçılar*, `8 Novabr` should be *8 Noyabr*).
-  **Use the `name_az` field for display and fix the English spellings before
-  launch** — a misspelt station name in Baku destroys credibility instantly.
+- **English transliterations in the data are inconsistent.** The site corrects
+  two that are plainly wrong (`Insahatchilar` → *Inshaatchilar*, `8 Novabr` →
+  *8 Noyabr*) and otherwise leaves them alone, since they are what people search
+  for. The `name_az` field is authoritative for Azerbaijani and Russian display —
+  it comes from the people who collected the measurements, and an earlier attempt
+  to "improve" it here introduced an error (`Xocəsən` → `Xocasan`). Correct the
+  data, not the rendering.
 - `Khojasan` has depth `0` and a single exit; it is the weakest node (4,320 kW).
 - Exit addresses are Azerbaijani street names, useful for the map's detail panel.
 - The 2025 figures are labelled as measured, but the measurement method is not

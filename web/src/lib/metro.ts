@@ -59,38 +59,13 @@ export const LINE_COLORS: Record<string, string> = {
 };
 
 /**
- * The dataset's English transliterations are inconsistent and a misspelt Baku
- * station name is the fastest way to lose a local reader. Corrections applied on
- * read; the Azerbaijani `name_az` field is authoritative for AZ display.
+ * The dataset's `name_az` is authoritative for Azerbaijani display — it comes
+ * from the people who collected the measurements. Only the ENGLISH
+ * transliterations need correcting, and only where they are plainly wrong.
  */
-const NAME_FIXES: Record<string, string> = {
-  Insahatchilar: "İnşaatçılar",
+const EN_FIXES: Record<string, string> = {
+  Insahatchilar: "Inshaatchilar",
   "8 Novabr": "8 Noyabr",
-  Khojasan: "Xocasan",
-  Avtovaghzal: "Avtovağzal",
-  "Elmler Akademiyasi": "Elmlər Akademiyası",
-  "Memar Ajami": "Memar Əcəmi",
-  "Memar Ajami 2": "Memar Əcəmi 2",
-  "Azadliq prospekti": "Azadlıq prospekti",
-  Ganjlik: "Gənclik",
-  Ulduz: "Ulduz",
-  Koroglu: "Koroğlu",
-  "Gara Garayev": "Qara Qarayev",
-  Neftchilar: "Neftçilər",
-  "Khalglar Dostlughu": "Xalqlar Dostluğu",
-  Akhmedli: "Əhmədli",
-  "Hazi Aslanov": "Həzi Aslanov",
-  Icherisheher: "İçərişəhər",
-  "Jafar Jabbarly": "Cəfər Cabbarlı",
-  "Shah Ismail Khatai": "Şah İsmayıl Xətai",
-  Darnagul: "Dərnəgül",
-  Nasimi: "Nəsimi",
-  Bakmil: "Bakmil",
-  Nizami: "Nizami",
-  Sahil: "Sahil",
-  "28 May": "28 May",
-  "Nariman Narimanov": "Nəriman Nərimanov",
-  "20 Yanvar": "20 Yanvar",
 };
 
 /** Display name for a locale. English keeps the transliteration people search for. */
@@ -120,8 +95,8 @@ export function getStations(): Station[] {
       const annualMwh = (recoverableKw * MODEL.operatingHoursPerYear) / 1000;
       return {
         id: s.name.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
-        name: s.name,
-        nameAz: NAME_FIXES[s.name] ?? s.name_az ?? s.name,
+        name: EN_FIXES[s.name] ?? s.name,
+        nameAz: s.name_az ?? s.name,
         line: s.line,
         lineColor: LINE_COLORS[s.line] ?? "#64748b",
         lat: s.latitude,

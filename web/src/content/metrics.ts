@@ -28,6 +28,18 @@ export const INDUSTRIAL = {
   /** 1 kWh electricity + 2.8 kWh recovered heat = 3.8 kWh thermal. */
   split: { electricity: 1, recovered: 2.8, output: 3.8 },
   paybackYears: [4.9, 7] as const,
+  /**
+   * ⚠️ DELIBERATELY NOT RENDERED ANYWHERE.
+   *
+   * The pitch deck presents these as the combined industrial + urban potential,
+   * but the metro alone measures 541,908 kW — more than the "combined" total —
+   * and the MWh and CO2 figures match the metro study almost exactly. The
+   * headline numbers look like the metro's, relabelled.
+   *
+   * Kept here so the disputed values have one documented home. Do not put them
+   * on the site until Q15 in collab/003-questions-for-isa.md is answered with a
+   * real industrial measurement.
+   */
   portfolio: {
     recoverableKw: 500_000,
     annualMwh: 2_000_000,

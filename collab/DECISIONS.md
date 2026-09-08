@@ -65,6 +65,23 @@ Isa-nın cavabları yeni suallar yaratdı:
 - [ ] T4 — Forma backend-i: öz serverimizdə SMTP? Resend? verilənlər bazası lazımdırmı?
 - [ ] T5 — Analitika: self-hosted Plausible / Umami / yoxdur
 
+### Cavabsızlıqda verilmiş qərarlar (Isa cavab verəndə yenidən baxılacaq)
+
+Tam izahı: [`004-status-and-open-items.md`](004-status-and-open-items.md) bölmə B.
+
+| # | Qərar | Hansı sualı əvəz edir |
+|---|---|---|
+| A1 | Raster loqo işlədilmir; orijinal inline SVG çəkilib | Q20 |
+| A2 | Sənaye rəqəmləri (500,000 kW və s.) saytda göstərilmir | Q15 |
+| A3 | «< 5 il» işlədilmir; payback iki ayrı ssenari kimi | Q16 |
+| A4 | Kalkulyator manat hesablamır (476,000 AZN isə 3 səhifədə var) | Q23 |
+| A5 | Ölçmə metodologiyası yazılmır; yalnız 4 model sabiti dərc olunur | Q22 |
+| A6 | Qurum adları saytda çəkilmir | Q18 |
+| A7 | Isa-nın rolu «Strategy» yazılıb (decklərdə «Team Leader») | Q17 |
+| A8 | Footer-də «Astem company» | Q19 |
+| A9 | AZ/RU tərcümələri Claude yazıb — Isa yoxlamayıb | Q4-ün ikinci hissəsi |
+| A10 | Stansiya adları datanın `name_az` sahəsindən gəlir | — |
+
 ### Server haqqında sonra soruşulacaq (kod yazmağa başlayanda)
 
 - [ ] S1 — Serverin OS-i və resursları (RAM/CPU), Docker versiyası
